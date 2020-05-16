@@ -2,15 +2,17 @@
 
 set -e
 
-# doomgrader config
-DOOMGRADER_ROOT=~/doomgrader
-DOWNLOAD_PATH=$DOOMGRADER_ROOT/files
-DEPOTDOWNLOADER_PATH=$DOOMGRADER_ROOT/depotdownloader
-
-# steam config
+# doomgrader required config
 STEAM_USERNAME=xxx
 STEAM_PASSWORD=xxx
+
+# doomgrader option config
+DOOMGRADER_ROOT=~/doomgrader
 STEAM_PATH=~/.steam/steam/steamapps/common
+
+# doomgrader internal paths
+DOWNLOAD_PATH=$DOOMGRADER_ROOT/files
+DEPOTDOWNLOADER_PATH=$DOOMGRADER_ROOT/depotdownloader
 
 # make doomgrader directories
 mkdir -p $DOOMGRADER_ROOT $DOWNLOAD_PATH $DEPOTDOWNLOADER_PATH
