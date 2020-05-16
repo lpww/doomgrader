@@ -45,3 +45,10 @@ found
 ## Copy the game files
 
 ...coming soon...
+
+
+## Running the game
+
+You should be able to run the game with Steam as normal. If a new update is
+released that doesn't fix the game, you will need to do the copy step again to
+replace the new games files with the working version
