@@ -31,13 +31,20 @@ Variables must be changed by editing the script before execution
 ### Optional
 
 - `DOOMGRADER_ROOT`: This is where doomgrader will store depotdownloader as well
-  as the game files. Defaults to `~/doomgrader`
-- `DOOMGRADER_PATH`: This is where the game files will download to. Defaults to
-  `~/doomgrader/files`
+  as the game files 
+
+  Defaults to `~/doomgrader`
+- `DOOMGRADER_PATH`: This is where the game files will download to
+
+  Defaults to `~/doomgrader/files`
 - `DEPOTDOWNLOADER_PATH`: This is where the DepotDownloader files will download
    to. This folder can be safely deleted after running the script if you don't
-   want to keep DepotDownloader. Defaults to `~/doomgrader/depotdownloader`
-- `STEAM_PATH`: You will only need to change this if you have changed your steam games directory. Defaults to the normal steam dir `~/.steam/steam/steamapps/common`
+   want to keep DepotDownloader
+
+   Defaults to `~/doomgrader/depotdownloader`
+- `STEAM_PATH`: You will only need to change this if you have changed your steam games directory
+
+  Defaults to the normal steam dir `~/.steam/steam/steamapps/common`
 
 ## Run the script
 
