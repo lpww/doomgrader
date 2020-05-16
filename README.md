@@ -16,6 +16,7 @@ found
    the [steamdb](https://steamdb.info)
 2. Downloads the most recent [working version](https://steamdb.info/patchnotes/4811158/) of the game
 3. Copies the old game files to your Steam directory so you are ready to play
+   (coming soon - the files must be manually copied right now)
 
 ## Installation
 
