@@ -41,3 +41,7 @@ found
 
 1. Make the script executable `chmod +x doomgrader.sh`
 2. Run the script `./doomgrader.sh`
+
+## Copy the game files
+
+...coming soon...
