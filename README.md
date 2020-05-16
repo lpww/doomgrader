@@ -31,7 +31,7 @@ Variables must be changed by editing the script before execution
 ### Optional
 
 - `DOOMGRADER_ROOT`: This is where doomgrader will store depotdownloader as well
-  as the game files.
+  as the game files. Defaults to `~/doomgrader`
 - `DOOMGRADER_PATH`: This is where the game files will download to. Defaults to
   `~/doomgrader/files`
 - `DEPOTDOWNLOADER_PATH`: This is where the DepotDownloader files will download
