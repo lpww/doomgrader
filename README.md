@@ -52,3 +52,14 @@ Variables must be changed by editing the script before execution
 You should be able to run the game with Steam as normal. If a new update is
 released that doesn't fix the game, you will need to do the copy step again to
 replace the new games files with the working version
+
+## Cleanup
+
+Remove all associated files by deleting the DOOMGRADER_ROOT: `rm -rf
+~/doomgrader`. This will remove all games files as well as DepotDownloader
+
+Remove just the DepotDownloader files by deleting DOOMGRADER_ROOT/depotdownloader: `rm
+-rf ~/doomgrader/depotdownloader`
+
+Remove just the game files by deleting DOOMGRADER_ROOT/files: `rm -rf
+~/doomgrader/files`
