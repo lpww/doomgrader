@@ -9,6 +9,14 @@ is an automation of steps put together by Campbell Jones. The original document 
 found
 [here](https://docs.google.com/document/d/1iugtqVUuG8TsnZyRzBV-QamdbygdSEGJzOSkDFGpgJU/edit)
 
+
+## What does it do?
+
+1. Gets [DepotDownloader](https://github.com/SteamRE/DepotDownloader), a program for downloading old versions of games from
+   the [steamdb](https://steamdb.info)
+2. Downloads the most recent [working version](https://steamdb.info/patchnotes/4811158/) of the game
+3. Copies the old game files to your Steam directory so you are ready to play
+
 ## Installation
 
 1. Clone this repo `git clone https://github.com/lpww/doomgrader.git`
@@ -16,6 +24,7 @@ found
 
 ## Prereqquisites
 
+- A fully updated version of Doom Eternal
 - .NET Core: See [here](https://wiki.archlinux.org/index.php/.NET_Core) for more
   information. Don't forget to add `~/.dotnet/tools` to your PATH.
 
