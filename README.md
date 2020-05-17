@@ -44,6 +44,7 @@ Variables must be changed by editing the script before execution
 1. Make the script executable `chmod +x doomgrader.sh`
 2. Run the script `./doomgrader.sh`
 3. Enter your Steam credentials when prompted (works with Steam Guard)
+4. Wait for the download to complete (this can take a very long time)
 
 ## Running the game
 
