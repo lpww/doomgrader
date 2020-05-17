@@ -39,4 +39,4 @@ chmod +x depotdownloader
 ./depotdownloader -app 782330 -depot 782339 -manifest 8937962102049582968 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 
 # copy game files to steam dir
-# coming soon
+\cp $DOWNLOAD_PATH/* $STEAM_PATH/DOOMEternal/ -rf

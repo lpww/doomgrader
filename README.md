@@ -15,7 +15,6 @@ found
 1. Gets [DepotDownloader](https://github.com/SteamRE/DepotDownloader), a program for downloading old versions of games from the [steamdb](https://steamdb.info)
 2. Downloads the most recent [working version](https://steamdb.info/patchnotes/4811158/) of the game
 3. Copies the old game files to your Steam directory so you are ready to play
-   (coming soon - the files must be manually copied right now)
 
 ## Installation
 
@@ -46,11 +45,22 @@ Variables must be changed by editing the script before execution
 3. Enter your Steam credentials when prompted (works with Steam Guard)
 4. Wait for the download to complete (this can take a very long time)
 
+## Copying game files
+
+The script will copy the downgraded game files to your Doom Eternal path
+automatically.
+
+However, if the game gets updated by Steam, you will need to copy the downgraded files
+again. You could do that by simply running the entire script as it will not
+redownload existing files. The fastest way would be to manually copy the files.
+Eg `\cp ~/doomgrader/files/* ~/.steam/steam/steamapps/common/DOOMEternal/ -rf`
+
 ## Running the game
 
 You should be able to run the game with Steam as normal. If a new update is
 released that doesn't fix the game, you will need to do the copy step again to
-replace the new games files with the working version
+replace the new games files with the working version. See the `Copying game
+files` section for more details
 
 ## Cleanup
 
