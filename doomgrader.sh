@@ -3,8 +3,8 @@
 set -e
 
 # doomgrader config
-DOOMGRADER_ROOT=~/doomgrader
-STEAM_PATH=~/.steam/steam/steamapps/common
+DOOMGRADER_ROOT=/run/media/nvme/.doomgrader/
+STEAM_PATH=/run/media/nvme/SteamLibrary/steamapps/common/
 
 # internal paths
 DOWNLOAD_PATH=$DOOMGRADER_ROOT/files
