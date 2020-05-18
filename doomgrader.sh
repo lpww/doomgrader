@@ -66,7 +66,9 @@ sed -i 's/dotnet/mono/' depotdownloader
 ./depotdownloader -app 782330 -depot 782336 -manifest 4248922069342282231 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 ./depotdownloader -app 782330 -depot 782339 -manifest 8937962102049582968 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 
+# adds space between depot downloader output and DOOMGRADER_COPY prompt
+echo ""
+
 # now copy the files downloaded from depotdownloader into your steam directory
-echo "" # adds space between depot downloader output and DOOMGRADER_COPY prompt
 DOOMGRADER_COPY
 
