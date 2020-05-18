@@ -26,13 +26,15 @@ then
     pushd $DEPOTDOWNLOADER_PATH
 
     # download depotdownloader
-    wget https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.3.4/depotdownloader-2.3.4.zip -O depotdownloader_2.3.4.zip
-
+    curl https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.3.4/depotdownloader-2.3.4.zip -o depotdownloader_2.3.4.zip -L
     # extract depotdownloader
     unzip depotdownloader_2.3.4.zip
 
     # make depotdownloader executable
     chmod +x depotdownloader
+    # replace dotnet dependency with mono
+    sed -i 's/dotnet/mono/' depotdownloader
+
 
     # download the depots
     ./depotdownloader -app 782330 -depot 782332 -manifest 4641765937586464647 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
