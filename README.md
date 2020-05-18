@@ -44,6 +44,7 @@ Variables must be changed by editing the script before execution
 2. Run the script `./doomgrader.sh`
 3. Enter your Steam credentials when prompted (works with Steam Guard)
 4. Wait for the download to complete (this can take a very long time)
+5. Answer the copying question when prompted (this is to ensure you don't erase files you don't want to)
 
 ## Copying game files
 
@@ -51,9 +52,9 @@ The script will copy the downgraded game files to your Doom Eternal path
 automatically.
 
 However, if the game gets updated by Steam, you will need to copy the downgraded files
-again. You could do that by simply running the entire script as it will not
-redownload existing files. The fastest way would be to manually copy the files.
-Eg `\cp ~/doomgrader/files/* ~/.steam/steam/steamapps/common/DOOMEternal/ -rf`
+again. You can run the script with the -c option to only copy the files:
+
+$ ./doomgrader -c
 
 ## Running the game
 
