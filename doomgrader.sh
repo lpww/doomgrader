@@ -28,6 +28,7 @@ unzip depotdownloader_2.3.4.zip
 
 # make depotdownloader executable
 chmod +x depotdownloader
+# replace dotnet dependency with mono
 sed -i 's/dotnet/mono/' depotdownloader
 
 # download the depots

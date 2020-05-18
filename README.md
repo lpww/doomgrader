@@ -24,8 +24,7 @@ found
 ## Prerequisites
 
 - A fully updated Steam version of Doom Eternal
-- .NET Core: See [here](https://wiki.archlinux.org/index.php/.NET_Core) for more
-  information. Don't forget to add `~/.dotnet/tools` to your PATH.
+- Mono: See [here](https://wiki.archlinux.org/index.php/Mono) for more information.
 
 ## Config
 
