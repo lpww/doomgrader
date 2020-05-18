@@ -18,7 +18,7 @@ echo "Copying the game from $DOWNLOAD_PATH to $STEAM_PATH/DOOMEternal/"
 echo "THIS WILL OVERWRITE YOUR EXISTING DOOM ETERNAL GAME FILES!"
 read -p "Is this correct (y/n)?: " DOOMGRADER_ANSWER
 
-if [[ $DOOMGRADER_ANSWER == 'Y' || $DOOMGRADER_ANSWER == "yes" || $DOOMGRADER_ANSWER == "YES" || $DOOMGRADER_ANSWER == "y" ]]
+if [[ $DOOMGRADER_ANSWER == 'Y' || $DOOMGRADER_ANSWER == "yes" || $DOOMGRADER_ANSWER == "YES" || $DOOMGRADER_ANSWER == "y" || $DOOMGRADER_ANSWER == "Yes" ]]
 then
     cp $DOWNLOAD_PATH/* $STEAM_PATH/DOOMEternal/ -rfv
 else
