@@ -12,7 +12,7 @@ $DEPOT__GAME_RESOURCES = "782336"
 $DEPOT__LAUNCHER = "782339"
 
 $download_path = Read-Host 'Enter a path for downloaded depots (optional)'
-if ([string]::IsNullOrWhiteSpace($download_path)) {
+If ([string]::IsNullOrWhiteSpace($download_path)) {
     $download_path = $DEFAULT_DEPO_PATH
 }
 $install_path = Read-Host 'Enter the path to your Doom Eternal installation'
@@ -23,14 +23,14 @@ If (-Not (Test-Path -Path $DEPO_DOWNLOADER_PATH) -And -Not (Test-Path $ZIP_NAME)
     Write-Output "Downloading depodownloader"
     Invoke-WebRequest -Uri $RELEASE_URL/$ZIP_NAME -OutFile $ZIP_NAME
 }
-else {
+Else {
     Write-Output "Found depodownloader zip or installation; skipping download"
 }
 If (-Not (Test-Path $DEPO_DOWNLOADER_PATH)) {
     Write-Output "Unzipping $ZIP_NAME"
     Expand-Archive -Path $ZIP_NAME -DestinationPath $DEPO_DOWNLOADER_PATH
 }
-else {
+Else {
     Write-Output "Found depodownloader installation; skipping unzip"
 }
 
