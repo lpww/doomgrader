@@ -54,9 +54,11 @@ FetchDowngrade -depot $DEPOT__VIDEO -manifest "8671913471625122045"
 FetchDowngrade -depot $DEPOT__GAME_RESOURCES -manifest "4248922069342282231"
 FetchDowngrade -depot $DEPOT__LAUNCHER -manifest "8937962102049582968"
 
-Write-Output "Clearing install folder ($install_path) before copying"
-Remove-Item -Path $install_path -Recurse -Force
-New-Item -Path $install_path -ItemType directory -Force
-
-Write-Output "Copying game files from $download_path to $install_path"
-Copy-Item -Path $download_path\* -Destination $install_path -Recurse -Force
+Write-Output "WARNING: Doom Eternal must be installed through Steam before the next step!"
+$proceed = Read-Host "Enter 'yes' to start copying files to $install_path"
+If ($proceed.Equals("yes")) {
+    Write-Output "Copying game files from $download_path to $install_path"
+    Copy-Item -Path $download_path\* -Destination $install_path -Recurse -Force
+} Else {
+    Write-Output "Aborting"
+}
