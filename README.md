@@ -64,8 +64,7 @@ files` section for more details
 
 ## Cleanup
 
-Remove all associated files by deleting the DOOMGRADER_ROOT. Eg `rm -rf
-~/doomgrader`. This will remove all games files as well as DepotDownloader
+Remove all associated files by deleting the DOOMGRADER_ROOT. Eg `rm -rf ~/doomgrader`. This will remove all games files as well as DepotDownloader
 
 Remove just the DepotDownloader files by deleting DOOMGRADER_ROOT/depotdownloader. Eg `rm -rf ~/doomgrader/depotdownloader`
 
