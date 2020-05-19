@@ -53,7 +53,7 @@ automatically.
 However, if the game gets updated by Steam, you will need to copy the downgraded files
 again. You can run the script with the -c option to only copy the files:
 
-$ ./doomgrader -c
+`./doomgrader -c`
 
 ## Running the game
 
