@@ -2,7 +2,7 @@
 
 set -e
 
-# doomgrader config
+# doomgrader config, edit DOOMGRADER_ROOT and STEAM_PATH
 DOOMGRADER_ROOT=~/doomgrader
 STEAM_PATH=~/.steam/steam/steamapps/common
 
@@ -10,7 +10,30 @@ STEAM_PATH=~/.steam/steam/steamapps/common
 DOWNLOAD_PATH=$DOOMGRADER_ROOT/files
 DEPOTDOWNLOADER_PATH=$DOOMGRADER_ROOT/depotdownloader
 
-# prompt for steam credentials
+# function for copying files with prompt
+copy()
+{
+echo "Copying the game from $DOWNLOAD_PATH to $STEAM_PATH/DOOMEternal/"
+echo "This will OVERWRITE your existing Doom Eternal game files"
+read -p "Is this correct (y/n)?: " DOOMGRADER_ANSWER
+
+if [[ $DOOMGRADER_ANSWER == 'Y' || $DOOMGRADER_ANSWER == "yes" || $DOOMGRADER_ANSWER == "YES" || $DOOMGRADER_ANSWER == "y" || $DOOMGRADER_ANSWER == "Yes" ]]
+then
+    \cp $DOWNLOAD_PATH/* $STEAM_PATH/DOOMEternal/ -rfv
+else
+    echo "Copying of files stopped"
+    echo "No files were copied or overwritten"
+fi
+}
+
+# if the "-c" option/flag is passed, then just do the copy and finish
+if [[ $1 == "-c" ]]
+then
+copy
+exit 0
+fi
+
+# prompt for steam credentials, no need to edit in the script
 IFS=$'\n' # handle spaces in passwords
 read -p "Enter your Steam username:" STEAM_USERNAME
 read -s -p "Enter your Steam password:" STEAM_PASSWORD
@@ -23,11 +46,13 @@ pushd $DEPOTDOWNLOADER_PATH
 
 # download depotdownloader
 curl https://github.com/SteamRE/DepotDownloader/releases/download/DepotDownloader_2.3.4/depotdownloader-2.3.4.zip -o depotdownloader_2.3.4.zip -L
+
 # extract depotdownloader
 unzip depotdownloader_2.3.4.zip
 
 # make depotdownloader executable
 chmod +x depotdownloader
+
 # replace dotnet dependency with mono
 sed -i 's/dotnet/mono/' depotdownloader
 
@@ -39,5 +64,9 @@ sed -i 's/dotnet/mono/' depotdownloader
 ./depotdownloader -app 782330 -depot 782336 -manifest 4248922069342282231 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 ./depotdownloader -app 782330 -depot 782339 -manifest 8937962102049582968 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 
-# copy game files to steam dir
-\cp $DOWNLOAD_PATH/* $STEAM_PATH/DOOMEternal/ -rf
+# adds space between depot downloader output and copy prompt
+echo ""
+
+# now copy the files downloaded from depotdownloader into your steam directory
+copy
+
