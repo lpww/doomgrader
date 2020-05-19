@@ -24,11 +24,11 @@ found
 ## Prerequisites
 
 - A fully updated Steam version of Doom Eternal
-- Mono: See [here](https://wiki.archlinux.org/index.php/Mono) for more information.
+- Mono v6: See [here](https://wiki.archlinux.org/index.php/Mono) for more information.
 
-## Config
+## Config (optional)
 
-Variables must be changed by editing the script before execution
+Variables should be changed by editing the script before execution
 
 - `DOOMGRADER_ROOT`: This is where doomgrader will store files. Games files will live in `$DOOMGRADER_ROOT/files`. DepotDownloader will live in `$DOOMGRADER_ROOT/depotdownloader`
 
@@ -67,8 +67,6 @@ files` section for more details
 Remove all associated files by deleting the DOOMGRADER_ROOT. Eg `rm -rf
 ~/doomgrader`. This will remove all games files as well as DepotDownloader
 
-Remove just the DepotDownloader files by deleting DOOMGRADER_ROOT/depotdownloader. Eg `rm
--rf ~/doomgrader/depotdownloader`
+Remove just the DepotDownloader files by deleting DOOMGRADER_ROOT/depotdownloader. Eg `rm -rf ~/doomgrader/depotdownloader`
 
-Remove just the game files by deleting DOOMGRADER_ROOT/files. Eg `rm -rf
-~/doomgrader/files`
+Remove just the game files by deleting DOOMGRADER_ROOT/files. Eg `rm -rf ~/doomgrader/files`
