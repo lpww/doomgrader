@@ -24,11 +24,11 @@ found
 ## Prerequisites
 
 - A fully updated Steam version of Doom Eternal
-- Mono: See [here](https://wiki.archlinux.org/index.php/Mono) for more information.
+- Mono v6: See [here](https://wiki.archlinux.org/index.php/Mono) for more information.
 
-## Config
+## Config (optional)
 
-Variables must be changed by editing the script before execution
+Variables should be changed by editing the script before execution
 
 - `DOOMGRADER_ROOT`: This is where doomgrader will store files. Games files will live in `$DOOMGRADER_ROOT/files`. DepotDownloader will live in `$DOOMGRADER_ROOT/depotdownloader`
 
@@ -43,6 +43,7 @@ Variables must be changed by editing the script before execution
 2. Run the script `./doomgrader.sh`
 3. Enter your Steam credentials when prompted (works with Steam Guard)
 4. Wait for the download to complete (this can take a very long time)
+5. Confirm that you want to copy the files to your steam games directory
 
 ## Copying game files
 
@@ -50,9 +51,9 @@ The script will copy the downgraded game files to your Doom Eternal path
 automatically.
 
 However, if the game gets updated by Steam, you will need to copy the downgraded files
-again. You could do that by simply running the entire script as it will not
-redownload existing files. The fastest way would be to manually copy the files.
-Eg `\cp ~/doomgrader/files/* ~/.steam/steam/steamapps/common/DOOMEternal/ -rf`
+again. You can run the script with the -c option to only copy the files:
+
+`./doomgrader -c`
 
 ## Running the game
 
@@ -66,8 +67,6 @@ files` section for more details
 Remove all associated files by deleting the DOOMGRADER_ROOT. Eg `rm -rf
 ~/doomgrader`. This will remove all games files as well as DepotDownloader
 
-Remove just the DepotDownloader files by deleting DOOMGRADER_ROOT/depotdownloader. Eg `rm
--rf ~/doomgrader/depotdownloader`
+Remove just the DepotDownloader files by deleting DOOMGRADER_ROOT/depotdownloader. Eg `rm -rf ~/doomgrader/depotdownloader`
 
-Remove just the game files by deleting DOOMGRADER_ROOT/files. Eg `rm -rf
-~/doomgrader/files`
+Remove just the game files by deleting DOOMGRADER_ROOT/files. Eg `rm -rf ~/doomgrader/files`
