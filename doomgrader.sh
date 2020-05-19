@@ -2,7 +2,7 @@
 
 set -e
 
-# doomgrader config; EDIT HERE!
+# doomgrader config, edit DOOMGRADER_ROOT and STEAM_PATH
 DOOMGRADER_ROOT=~/doomgrader
 STEAM_PATH=~/.steam/steam/steamapps/common
 
@@ -11,30 +11,28 @@ DOWNLOAD_PATH=$DOOMGRADER_ROOT/files
 DEPOTDOWNLOADER_PATH=$DOOMGRADER_ROOT/depotdownloader
 
 # function for copying files with prompt
-DOOMGRADER_COPY()
+copy()
 {
-# copy game files to steam dir
 echo "Copying the game from $DOWNLOAD_PATH to $STEAM_PATH/DOOMEternal/"
-echo "THIS WILL OVERWRITE YOUR EXISTING DOOM ETERNAL GAME FILES!"
+echo "This will OVERWRITE your existing Doom Eternal game files"
 read -p "Is this correct (y/n)?: " DOOMGRADER_ANSWER
 
 if [[ $DOOMGRADER_ANSWER == 'Y' || $DOOMGRADER_ANSWER == "yes" || $DOOMGRADER_ANSWER == "YES" || $DOOMGRADER_ANSWER == "y" || $DOOMGRADER_ANSWER == "Yes" ]]
 then
-    cp $DOWNLOAD_PATH/* $STEAM_PATH/DOOMEternal/ -rfv
+    \cp $DOWNLOAD_PATH/* $STEAM_PATH/DOOMEternal/ -rfv
 else
-    echo "Copying of files stopped!"
-    echo "No files were copied or overwritten!"
+    echo "Copying of files stopped"
+    echo "No files were copied or overwritten"
 fi
 }
 
 # if the "-c" option/flag is passed, then just do the copy and finish
 if [[ $1 == "-c" ]]
 then
-DOOMGRADER_COPY
+copy
 exit 0
 fi
 
-# handles downloading depotdownloader and downloading the old version of Doom Eternal
 # prompt for steam credentials, no need to edit in the script
 IFS=$'\n' # handle spaces in passwords
 read -p "Enter your Steam username:" STEAM_USERNAME
@@ -66,9 +64,9 @@ sed -i 's/dotnet/mono/' depotdownloader
 ./depotdownloader -app 782330 -depot 782336 -manifest 4248922069342282231 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 ./depotdownloader -app 782330 -depot 782339 -manifest 8937962102049582968 -username "$STEAM_USERNAME" -password "$STEAM_PASSWORD" -remember-password -dir "$DOWNLOAD_PATH"
 
-# adds space between depot downloader output and DOOMGRADER_COPY prompt
+# adds space between depot downloader output and copy prompt
 echo ""
 
 # now copy the files downloaded from depotdownloader into your steam directory
-DOOMGRADER_COPY
+copy
 
