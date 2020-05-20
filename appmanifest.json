@@ -1,0 +1,45 @@
+{
+  "appID": 782330,
+  "depots": [
+    {
+      "depotId": 782332,
+      "depotName": "Windows Executable",
+      "manifest": 4641765937586465000
+    },
+    {
+      "depotId": 782333,
+      "depotName": "Configs",
+      "manifest": 4686311672633196000
+    },
+    {
+      "depotId": 782334,
+      "depotName": "Sound",
+      "manifest": 2624212357815850500
+    },
+    {
+      "depotId": 782335,
+      "depotName": "Video",
+      "manifest": 8671913471625122000
+    },
+    {
+      "depotId": 782336,
+      "depotName": "Game resources",
+      "manifest": 4248922069342282000
+    },
+    {
+      "depotId": 782337,
+      "depotName": "Lightdbs",
+      "manifest": 122337607158713700
+    },
+    {
+      "depotId": 782338,
+      "depotName": "rcbootstrap",
+      "manifest": 4899404039317731000
+    },
+    {
+      "depotId": 782339,
+      "depotName": "Launcher",
+      "manifest": 8937962102049583000
+    }
+  ]
+}
