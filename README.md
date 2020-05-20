@@ -1,8 +1,10 @@
 # doomgrader
 Downgrade Doom Eternal on Steam to the pre anti-cheat version
 
+Windows users should use Matthew's [windoomgrader](https://github.com/mjsonofharry/windoomgrader) reimplementation of this script
+
 ## Overview
-This script can be used by Linux and [Windows](https://github.com/mjsonofharry/doomgrader) gamers to downgrade Doom Eternal to the pre anti
+This script can be used by Linux gamers to downgrade Doom Eternal to the pre anti
 cheat [version](https://steamdb.info/patchnotes/4811158/). This will make the single player game playable again for linux
 users who bought the game on Steam and were screwed over by the anti cheat update. This script
 is an automation of steps put together by Campbell Jones. The original document can be
