@@ -3,8 +3,8 @@
 set -e
 
 # optional doomgrader config, only edit DOOMGRADER_ROOT and STEAM_PATH
-DOOMGRADER_ROOT=~/doomgrader
-STEAM_PATH=~/.steam/steam/steamapps/common
+DOOMGRADER_ROOT=${DOOMGRADER_ROOT:-~/doomgrader}
+STEAM_PATH=${STEAM_PATH:-~/.steam/steam/steamapps/common}
 
 # internal paths
 DOWNLOAD_PATH=$DOOMGRADER_ROOT/files

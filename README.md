@@ -47,6 +47,14 @@ Variables should be changed by editing the script before execution
 4. Wait for the download to complete (this can take a very long time)
 5. Confirm that you want to copy the files to your steam games directory
 
+Alternatively, if you have problems with Mono versions or errors relating to assemblies,
+there is a Dockerfile which would allow you to run the script in a container:
+
+```
+docker build -t doomgrader .
+docker run -ti -v /your/steam/files:/steam -v /temporary/doomgrader/files:/data doomgrader
+```
+
 ## Copying game files
 
 The script will copy the downgraded game files to your Doom Eternal path
