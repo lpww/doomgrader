@@ -9,4 +9,4 @@ ADD . /doomgrader
 WORKDIR /doomgrader
 ENV STEAM_PATH=/steam
 ENV DOOMGRADER_ROOT=/data
-CMD ./doomgrader.sh
+ENTRYPOINT ./doomgrader.sh
