@@ -19,7 +19,6 @@ found
 3. Copies the old game files to your Steam directory so you are ready to play
 
 ## Installation
-
 1. Clone this repo `git clone https://github.com/lpww/doomgrader.git`
 2. Change directory `cd doomgrader`
 
@@ -47,14 +46,6 @@ Variables should be changed by editing the script before execution
 4. Wait for the download to complete (this can take a very long time)
 5. Confirm that you want to copy the files to your steam games directory
 
-Alternatively, if you have problems with Mono versions or errors relating to assemblies,
-there is a Dockerfile which would allow you to run the script in a container:
-
-```
-docker build -t doomgrader .
-docker run -ti -v /your/steam/files:/steam -v /temporary/doomgrader/files:/data doomgrader
-```
-
 ## Copying game files
 
 The script will copy the downgraded game files to your Doom Eternal path
@@ -64,6 +55,17 @@ However, if the game gets updated by Steam, you will need to copy the downgraded
 again. You can run the script with the -c option to only copy the files:
 
 `./doomgrader -c`
+
+## Docker
+
+If you have any problems running the script locally, you could run it in the
+docker container instead
+
+```
+docker build -t doomgrader . # build the docker image
+docker run -ti -v ~/doomgrader:/data -v ~/Steam/steamapps/common:/steam doomgrader # download and copy files
+docker run -ti -v ~/doomgrader:/data -v ~/Steam/steamapps/common:/steam doomgrader -c # copy files
+```
 
 ## Running the game
 
